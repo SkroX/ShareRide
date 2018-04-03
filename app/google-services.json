@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "341913408590",
+    "firebase_url": "https://shareride-d7a04.firebaseio.com",
+    "project_id": "shareride-d7a04",
+    "storage_bucket": "shareride-d7a04.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:341913408590:android:c12847e511b7e220",
+        "android_client_info": {
+          "package_name": "com.example.rajeev.shareride"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "341913408590-50a1ojugmg6lnt80f72j69e70pm4hs8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAhtVHi4LbRDTRYwa2d82mpZLJAzNJVgfc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
