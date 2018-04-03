@@ -23,7 +23,7 @@ import java.util.Map;
  * Created by rajeev on 4/3/18.
  */
 
-public class NewPostActivity extends BasicActivity{
+public class NewPostActivity extends BasicActivity {
     private static final String TAG = "NewPostActivity";
     private static final String REQUIRED = "Required";
 
