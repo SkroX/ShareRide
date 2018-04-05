@@ -1,10 +1,12 @@
 package com.example.rajeev.shareride;
 
+import android.app.DialogFragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -32,6 +34,8 @@ public class NewPostActivity extends BasicActivity {
     private EditText mTitleField;
     private EditText mBodyField;
     private FloatingActionButton mSubmitButton;
+    private Button mDate;
+    private Button mTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +47,24 @@ public class NewPostActivity extends BasicActivity {
         mTitleField = findViewById(R.id.field_title);
         mBodyField = findViewById(R.id.field_body);
         mSubmitButton = findViewById(R.id.fab_submit_post);
+        mDate = findViewById(R.id.date);
+        mTime = findViewById(R.id.time);
+
+        mDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new DatePickerFragment();
+                newFragment.show(getFragmentManager(), "Date Picker");
+            }
+        });
+
+        mTime.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DialogFragment newFragment = new TimePickerFragment();
+                newFragment.show(getFragmentManager(), "Time Picker");
+            }
+        });
 
         mSubmitButton.setOnClickListener(new View.OnClickListener() {
             @Override
