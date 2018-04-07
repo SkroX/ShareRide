@@ -44,7 +44,7 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
 
     private TextView mAuthorView;
     private TextView mTitleView;
-    private TextView mBodyView;
+//    private TextView mBodyView;
     private EditText mCommentField;
     private Button mCommentButton;
     private RecyclerView mCommentsRecycler;
@@ -69,7 +69,7 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
         // Initialize Views
         mAuthorView = findViewById(R.id.post_author);
         mTitleView = findViewById(R.id.post_title);
-        mBodyView = findViewById(R.id.post_body);
+//        mBodyView = findViewById(R.id.post_body);
         mCommentField = findViewById(R.id.field_comment_text);
         mCommentButton = findViewById(R.id.button_post_comment);
         mCommentsRecycler = findViewById(R.id.recycler_comments);
@@ -93,7 +93,7 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                 // [START_EXCLUDE]
                 mAuthorView.setText(post.author);
                 mTitleView.setText(post.title);
-                mBodyView.setText(post.body);
+//                mBodyView.setText(post.body);
                 // [END_EXCLUDE]
             }
 

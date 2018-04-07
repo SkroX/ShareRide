@@ -27,14 +27,14 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         authorView = itemView.findViewById(R.id.post_author);
 //        starView = itemView.findViewById(R.id.star);
 //        numStarsView = itemView.findViewById(R.id.post_num_stars);
-        bodyView = itemView.findViewById(R.id.post_body);
+//        bodyView = itemView.findViewById(R.id.post_body);
     }
 
     public void bindToPost(Post post, View.OnClickListener starClickListener) {
         titleView.setText(post.title);
         authorView.setText(post.author);
 //        numStarsView.setText(String.valueOf(post.starCount));
-        bodyView.setText(post.body);
+//        bodyView.setText(post.body);
 
 //        starView.setOnClickListener(starClickListener);
     }
