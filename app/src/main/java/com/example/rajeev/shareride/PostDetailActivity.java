@@ -76,7 +76,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
 
         mCommentButton.setOnClickListener(this);
         mCommentsRecycler.setLayoutManager(new LinearLayoutManager(this));
-
     }
 
     @Override
@@ -157,6 +156,7 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
 
                         // Clear the field
                         mCommentField.setText(null);
+                        mCommentsRecycler.smoothScrollToPosition(mAdapter.getItemCount());
                     }
 
                     @Override

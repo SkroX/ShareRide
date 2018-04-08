@@ -20,6 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PostDetailActivity"></activity>
+        <activity android:name=".PostDetailActivity" android:windowSoftInputMode="adjustPan"></activity>
     </application>
 </manifest>
