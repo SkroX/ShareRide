@@ -45,8 +45,8 @@ public class Post{
             result.put("title", title);
 //            result.put("source", source);
 //            result.put("destination", destination);
-            result.put("date", dateOfJourney);
-            result.put("time", timeOfJourney);
+            result.put("dateOfJourney", dateOfJourney);
+            result.put("timeOfJourney", timeOfJourney);
             result.put("body", body);
 //            result.put("starCount", starCount);
 //            result.put("stars", stars);

@@ -98,8 +98,8 @@ public class NewPostActivity extends BasicActivity {
     private void submitPost() {
         final String source = mTitleField.getText().toString();
         final String destination = mBodyField.getText().toString();
-        final String dateOfJourney = mDate.getText().toString();
-        final String timeOfJourney = mTime.getText().toString();
+        final String dateOfJourney = "On: " + mDate.getText().toString();
+        final String timeOfJourney = "At: " + mTime.getText().toString();
         final String title = source + " to " + destination;
         final String body = "";
 
@@ -124,6 +124,8 @@ public class NewPostActivity extends BasicActivity {
             Toast.makeText(this, "Time Required", Toast.LENGTH_LONG).show();
             return;
         }
+
+        Toast.makeText(this, dateOfJourney + " " + timeOfJourney, Toast.LENGTH_LONG).show();
 
         // Disable button so there are no multi-posts
         setEditingEnabled(false);
