@@ -46,6 +46,7 @@ public class NewPostActivity extends BasicActivity {
     private FloatingActionButton mSubmitButton;
     private Button mDate;
     private Button mTime;
+    private String body;
 
 
     @Override
@@ -101,7 +102,18 @@ public class NewPostActivity extends BasicActivity {
         final String dateOfJourney = "On: " + mDate.getText().toString();
         final String timeOfJourney = "At: " + mTime.getText().toString();
         final String title = source + " to " + destination;
-        final String body = "";
+        final String person1 = mPerson1.getText().toString();
+        final String contact1 = mContact1.getText().toString();
+        final String person2 = mPerson2.getText().toString();
+        final String contact2 = mContact2.getText().toString();
+        final String person3 = mPerson3.getText().toString();
+        final String contact3 = mContact3.getText().toString();
+        final String person4 = mPerson4.getText().toString();
+        final String contact4 = mContact4.getText().toString();
+        final String person5 = mPerson5.getText().toString();
+        final String contact5 = mContact5.getText().toString();
+
+        body = "";
 
         // Title is required
         if (TextUtils.isEmpty(source)) {
@@ -125,7 +137,54 @@ public class NewPostActivity extends BasicActivity {
             return;
         }
 
-        Toast.makeText(this, dateOfJourney + " " + timeOfJourney, Toast.LENGTH_LONG).show();
+        if (TextUtils.isEmpty(person1)) {
+            mPerson1.setError(REQUIRED);
+            return;
+        }
+
+        if (TextUtils.isEmpty(contact1)) {
+            mContact1.setError(REQUIRED);
+            return;
+        }
+
+        body = body + person1 + "#" + contact1 + "@";
+
+
+        if (!TextUtils.isEmpty(contact2)){
+            if (TextUtils.isEmpty(person2)){
+                mPerson2.setError(REQUIRED);
+                return;
+            }
+        }
+
+        body = body + person2 + "#" + contact2 + "@";
+
+        if (!TextUtils.isEmpty(contact3)){
+            if (TextUtils.isEmpty(person3)){
+                mPerson3.setError(REQUIRED);
+                return;
+            }
+        }
+
+        body = body + person3 + "#" + contact3 + "@";
+
+        if (!TextUtils.isEmpty(contact4)){
+            if (TextUtils.isEmpty(person3)){
+                mPerson4.setError(REQUIRED);
+                return;
+            }
+        }
+
+        body = body + person4 + "#" + contact4 + "@";
+
+        if (!TextUtils.isEmpty(contact5)){
+            if (TextUtils.isEmpty(person5)){
+                mPerson5.setError(REQUIRED);
+                return;
+            }
+        }
+
+        body = body + person5 + "#" + contact5;
 
         // Disable button so there are no multi-posts
         setEditingEnabled(false);

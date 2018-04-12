@@ -92,13 +92,13 @@ public abstract class PostListFragment extends Fragment {
                     }
                 });
 
-                viewHolder.bindToPost(model, new View.OnClickListener() {
+                viewHolder.bindToPost(model); /**, new View.OnClickListener() {
                     @Override
                     public void onClick(View starView) {
                         DatabaseReference globalPostRef = mDatabase.child("posts").child(postRef.getKey());
                         DatabaseReference userPostRef = mDatabase.child("user-posts").child(model.uid).child(postRef.getKey());
                     }
-                });
+                });**/
             }
         };
         mRecycler.setAdapter(mAdapter);

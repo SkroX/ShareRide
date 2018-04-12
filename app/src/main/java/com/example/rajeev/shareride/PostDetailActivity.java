@@ -46,6 +46,16 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
     private TextView mTitleView;
     private TextView mDate;
     private TextView mTime;
+    private TextView mPerson1View;
+    private TextView mPerson2View;
+    private TextView mPerson3View;
+    private TextView mPerson4View;
+    private TextView mPerson5View;
+    private TextView mContact1View;
+    private TextView mContact2View;
+    private TextView mContact3View;
+    private TextView mContact4View;
+    private TextView mContact5View;
 //    private TextView mBodyView;
     private EditText mCommentField;
     private Button mCommentButton;
@@ -73,6 +83,16 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
         mTitleView = findViewById(R.id.post_title);
         mDate = findViewById(R.id.text_date);
         mTime = findViewById(R.id.text_time);
+        mPerson1View = findViewById(R.id.person_1_text);
+        mPerson2View = findViewById(R.id.person_2_text);
+        mPerson3View = findViewById(R.id.person_3_text);
+        mPerson4View = findViewById(R.id.person_4_text);
+        mPerson5View = findViewById(R.id.person_5_text);
+        mContact1View = findViewById(R.id.contact_1_text);
+        mContact2View = findViewById(R.id.contact_2_text);
+        mContact3View = findViewById(R.id.contact_3_text);
+        mContact4View = findViewById(R.id.contact_4_text);
+        mContact5View = findViewById(R.id.contact_5_text);
 //        mBodyView = findViewById(R.id.post_body);
         mCommentField = findViewById(R.id.field_comment_text);
         mCommentButton = findViewById(R.id.button_post_comment);
@@ -98,6 +118,50 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                 mTitleView.setText(post.title);
                 mDate.setText(post.dateOfJourney);
                 mTime.setText(post.timeOfJourney);
+
+                String[] displayBody = post.body.split("@");
+                mPerson1View.setText(displayBody[0].split("#")[0]);
+                mContact1View.setText(displayBody[0].split("#")[1]);
+                if(displayBody[1] != "#"){
+                    if (displayBody[1].split("#").length > 1 ){
+                        mPerson2View.setText(displayBody[1].split("#")[0]);
+                        mContact2View.setText(displayBody[1].split("#")[1]);
+                    }
+                    else{
+                        mPerson2View.setText(displayBody[1].replace("#", ""));
+                        mContact2View.setText("");
+                    }
+                }
+                if(displayBody[2] != "#"){
+                    if (displayBody[2].split("#").length > 1 ){
+                        mPerson3View.setText(displayBody[2].split("#")[0]);
+                        mContact3View.setText(displayBody[2].split("#")[1]);
+                    }
+                    else{
+                        mPerson3View.setText(displayBody[2].replace("#", ""));
+                        mContact3View.setText("");
+                    }
+                }
+                if (displayBody[3] != "#") {
+                    if (displayBody[3].split("#").length > 1 ){
+                        mPerson4View.setText(displayBody[3].split("#")[0]);
+                        mContact4View.setText(displayBody[3].split("#")[1]);
+                    }
+                    else{
+                        mPerson4View.setText(displayBody[3].replace("#", ""));
+                        mContact4View.setText("");
+                    }
+                }
+                if (displayBody[4] != "#") {
+                    if (displayBody[4].split("#").length > 1 ){
+                        mPerson5View.setText(displayBody[4].split("#")[0]);
+                        mContact5View.setText(displayBody[4].split("#")[1]);
+                    }
+                    else{
+                        mPerson5View.setText(displayBody[4].replace("#", ""));
+                        mContact5View.setText("");
+                    }
+                }
 //                mBodyView.setText(post.body);
                 // [END_EXCLUDE]
             }

@@ -37,6 +37,7 @@
             android:textColor="#000000"
             android:textAlignment="viewStart"
             android:layout_marginTop="10dp"
+            tools:text="3/5/2018"
             android:layout_weight="1"/>
         <!--<TextView-->
             <!--android:layout_width="match_parent"-->
@@ -57,6 +58,7 @@
             android:layout_marginTop="10dp"
             android:textAlignment="viewEnd"
             android:layout_marginRight="5dp"
+            tools:text="00:00"
             android:layout_weight="1"
             />
 
@@ -73,6 +75,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             tools:textSize="20sp"
+            tools:text="Person1"
+            android:textAlignment="viewStart"
             android:layout_weight="1"
             />
         <TextView
@@ -80,6 +84,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:textSize="20sp"
+            tools:text="1111"
+            android:textAlignment="viewEnd"
             android:layout_weight="2"/>
     </LinearLayout>
 
@@ -93,7 +99,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAlignment="viewStart"
             tools:textSize="20sp"
+            tools:text="Person2"
             android:layout_weight="1"
             />
         <TextView
@@ -101,6 +109,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:textSize="20sp"
+            tools:text="2222"
+            android:textAlignment="viewEnd"
             android:layout_weight="2"/>
     </LinearLayout>
 
@@ -115,13 +125,17 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             tools:textSize="20sp"
+            tools:text="Person3"
+            android:textAlignment="viewStart"
             android:layout_weight="1"
             />
         <TextView
             android:id="@+id/contact_3_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:textSize="22sp"
+            tools:textSize="20sp"
+            tools:text="3333"
+            android:textAlignment="viewEnd"
             android:layout_weight="2"/>
     </LinearLayout>
 
@@ -135,7 +149,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
+            android:textAlignment="viewStart"
             tools:textSize="20sp"
+            tools:text="Person4"
             android:layout_weight="1"
             />
         <TextView
@@ -143,6 +159,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:textSize="20sp"
+            tools:text="4444"
+            android:textAlignment="viewEnd"
             android:layout_weight="2"/>
     </LinearLayout>
 
@@ -157,6 +175,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             tools:textSize="20sp"
+            tools:text="Person5"
+            android:textAlignment="viewStart"
             android:layout_weight="1"
             />
         <TextView
@@ -164,6 +184,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:textSize="20sp"
+            tools:text="5555"
+            android:textAlignment="viewEnd"
             android:layout_weight="2"/>
     </LinearLayout>
 </LinearLayout>
