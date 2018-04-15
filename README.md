@@ -37,4 +37,4 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
 
 
 
-Contributions or suggestions are welcome :simple_smile:
+### Contributions or suggestions are welcome :v:
