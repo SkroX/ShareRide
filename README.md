@@ -17,4 +17,4 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
 
 ### 1. Details Form
 
-![Details](READMEIMG/Details.png {height=100px width=100px})
+<img src="https://github.com/rajeev29five/ShareRide/blob/master/READMEIMG/Details.png" width="200" height="200">
