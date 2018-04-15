@@ -12,6 +12,8 @@ import com.example.rajeev.shareride.models.Post;
 
 import org.w3c.dom.Text;
 
+import java.util.Arrays;
+
 /**
  * Created by rajeev on 4/3/18.
  */
@@ -61,6 +63,8 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         String[] displayBody = post.body.split("@");
         mPerson1View.setText(displayBody[0].split("#")[0]);
         mContact1View.setText(displayBody[0].split("#")[1]);
+        
+
         if(displayBody[1] != "#"){
             if (displayBody[1].split("#").length > 1 ){
                 mPerson2View.setText(displayBody[1].split("#")[0]);
