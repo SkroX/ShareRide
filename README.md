@@ -17,4 +17,4 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
 
 ### 1. Details Form
 
-![alt text](READMEIMG/Details.png|width=100)
+![alt text](READMEIMG/Details.png=250x250)
