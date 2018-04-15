@@ -12,3 +12,9 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
     * Download the google-services.json file.
   * Paste google-services.json file in projects app directory.
   * You are good to go.
+
+## Screenshots
+
+### Details Form
+
+![alt text](READMEIMG/Details.png)
