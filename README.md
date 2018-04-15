@@ -10,7 +10,7 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
     * Follow instructions to get started with Firebase.
     * Add this project in RealTime Database.
     * Download the google-services.json file.
-  * Paste google-services.json file in projects app directory.
+  * Paste google-services.json file in project's app directory.
   * You are good to go.
 
 ## Screenshots
