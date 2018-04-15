@@ -5,10 +5,10 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
 
 ## Build
 
-Markup: * Import project in Android Studio
-        * Create account on [Firebase](https://firebase.google.com/)
-            * Follow instructions to get started with Firebase.
-            * Add this project in RealTime Database.
-            * Download the google-services.json file.
-        * Paste google-services.json file in projects app directory.
-        * You are good to go.
+  * Import project in Android Studio
+  * Create account on [Firebase](https://firebase.google.com/)
+    * Follow instructions to get started with Firebase.
+    * Add this project in RealTime Database.
+    * Download the google-services.json file.
+  * Paste google-services.json file in projects app directory.
+  * You are good to go.
