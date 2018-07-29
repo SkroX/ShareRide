@@ -11,6 +11,7 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
     * Add this project in RealTime Database.
     * Download the google-services.json file.
   * Paste google-services.json file in project's app directory.
+  * For Google authentication follow [instructions on this page.](https://firebase.google.com/docs/auth/android/google-signin) 
   * You are good to go.
 
 ## Screenshots
