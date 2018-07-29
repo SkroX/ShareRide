@@ -2,8 +2,10 @@ package com.example.rajeev.shareride;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -218,7 +220,11 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                         String authorName = user.username;
 
                         // Create new comment object
-                        String commentText = mCommentField.getText().toString();
+                        String commentText = mCommentField.getText().toString().trim();
+                        if(TextUtils.isEmpty(commentText)){
+                            showToast();
+                            return;
+                        }
                         Comment comment = new Comment(uid, authorName, commentText);
 
                         // Push the comment, it will appear in the list
@@ -234,6 +240,10 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
 
                     }
                 });
+    }
+
+    private void showToast() {
+        Toast.makeText(this, "comment field is empty", Toast.LENGTH_LONG).show();
     }
 
     private static class CommentViewHolder extends RecyclerView.ViewHolder {
@@ -311,7 +321,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                     // comment and if so remove it.
                     String commentKey = dataSnapshot.getKey();
 
-                    // [START_EXCLUDE]
                     int commentIndex = mCommentIds.indexOf(commentKey);
                     if (commentIndex > -1) {
                         // Remove data from the list
@@ -323,7 +332,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                     } else {
                         Log.w(TAG, "onChildRemoved:unknown_child:" + commentKey);
                     }
-                    // [END_EXCLUDE]
                 }
 
                 @Override
@@ -335,7 +343,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                     Comment movedComment = dataSnapshot.getValue(Comment.class);
                     String commentKey = dataSnapshot.getKey();
 
-                    // ...
                 }
 
                 @Override

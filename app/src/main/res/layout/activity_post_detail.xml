@@ -26,14 +26,33 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/post_author_layout"/>
 
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/post_text_layout"
+        android:background="@android:color/darker_gray"
+        />
+
+    <TextView
+        android:id="@+id/Comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator"
+        android:paddingTop="5dp"
+        android:text="Comments"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        />
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_comments"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_below="@+id/post_text_layout"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/Comments"
         android:layout_above="@id/comment_form"
+        android:background="#f6f6ff"
         tools:listitem="@layout/item_comment" />
 
     <LinearLayout
@@ -51,6 +70,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:layout_weight="0.8"
+            android:layout_marginTop="7dp"
             android:hint="Write a comment..." />
 
         <Button
@@ -59,6 +79,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.2"
+            android:background="@drawable/rounded_button"
+            android:textColor="#ffffff"
             android:text="Post" />
 
     </LinearLayout>

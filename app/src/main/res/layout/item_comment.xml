@@ -14,7 +14,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
         android:layout_toRightOf="@+id/comment_photo"
         android:orientation="vertical"
         android:padding="5dp">
@@ -24,14 +26,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            tools:text="John Doe" />
+            android:textColor="#7a7c86"
+            tools:text="Author" />
 
         <TextView
             android:id="@+id/comment_body"
             style="@style/TextAppearance.AppCompat.Small"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="This is the comment text.." />
+            android:padding="5dp"
+            android:background="@drawable/their_chat_bubble"
+            tools:text="This is the comment text.."
+            android:textColor="@android:color/white"/>
 
     </LinearLayout>
 

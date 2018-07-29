@@ -6,6 +6,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -65,6 +66,7 @@ public class MainActivity extends BasicActivity {
                 startActivity(new Intent(MainActivity.this, NewPostActivity.class));
             }
         });
+
     }
 
     @Override
@@ -85,5 +87,4 @@ public class MainActivity extends BasicActivity {
             return super.onOptionsItemSelected(item);
         }
     }
-
 }
