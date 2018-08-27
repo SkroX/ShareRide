@@ -14,12 +14,13 @@
 
     <TextView
         android:id="@+id/logo_text"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:text="shareride"
         android:textAlignment="center"
-        android:textSize="75sp"
+        android:textSize="70sp"
+        android:paddingBottom="25dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/cardview_light_background"/>
 
@@ -27,6 +28,7 @@
         android:id="@+id/login_with_google"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_below="@+id/logo_text">
 
     </com.google.android.gms.common.SignInButton>
