@@ -14,6 +14,8 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
   * For Google authentication follow [instructions on this page.](https://firebase.google.com/docs/auth/android/google-signin) 
   * You are good to go.
 
+## Demo 
 
+![App Demo](https://github.com/rajeev29five/ShareRide/blob/master/demo.gif)
 
 ### Contributions or suggestions are welcome :v:
