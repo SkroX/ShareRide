@@ -2,6 +2,7 @@ package com.example.rajeev.shareride;
 
 import android.app.DialogFragment;
 import android.os.Bundle;
+import android.app.Activity;
 import android.support.design.widget.FloatingActionButton;
 import android.text.TextUtils;
 import android.util.Log;
@@ -20,10 +21,6 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
 import java.util.Map;
-
-/**
- * Created by rajeev on 4/3/18.
- */
 
 public class NewPostActivity extends BasicActivity {
     private static final String TAG = "NewPostActivity";
