@@ -30,6 +30,6 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
     @Override
     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
         Button b = getActivity().findViewById(R.id.date);
-        b.setText(dayOfMonth + "/" + month + "/" + year);
+        b.setText(dayOfMonth + "/" + (month+1) + "/" + year);
     }
 }
