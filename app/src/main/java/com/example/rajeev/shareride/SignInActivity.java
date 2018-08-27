@@ -60,7 +60,7 @@ public class SignInActivity extends BasicActivity implements View.OnClickListene
         setContentView(R.layout.activity_sign_in);
 
         mGoogleSignInButton = findViewById(R.id.login_with_google);
-        mGoogleSignInButton.setSize(SignInButton.SIZE_STANDARD);
+        mGoogleSignInButton.setSize(SignInButton.SIZE_WIDE);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken("USE YOUR OWN TOKEN")
