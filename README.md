@@ -14,28 +14,6 @@ hosted NoSQL Database To Store & Sync Your Mobile App Data.
   * For Google authentication follow [instructions on this page.](https://firebase.google.com/docs/auth/android/google-signin) 
   * You are good to go.
 
-## Screenshots
-
-### 1. Details Form
-
-<img src="https://github.com/rajeev29five/ShareRide/blob/master/READMEIMG/Details.png" width="400" height="600">
-
-### 2. Filled Form
-
-<img src="https://github.com/rajeev29five/ShareRide/blob/master/READMEIMG/FillDetails.png" width="400" height="600">
-
-### 3. Active cabs for sharing
-
-<img src="https://github.com/rajeev29five/ShareRide/blob/master/READMEIMG/Posts.png" width="400" height="600">
-
-### 4. Comments
-
-<img src="https://github.com/rajeev29five/ShareRide/blob/master/READMEIMG/Comments.png" width="400" height="600">
-
-### 5. Previous Rides of User
-
-<img src="https://github.com/rajeev29five/ShareRide/blob/master/READMEIMG/PreviousRides.png" width="400" height="600">
-
 
 
 ### Contributions or suggestions are welcome :v:
