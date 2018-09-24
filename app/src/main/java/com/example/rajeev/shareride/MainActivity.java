@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             };
             private final String[] mFragmentNames = new String[]{
                     "Active Rides",
-                    "Previous Rides",
+                    "My Rides",
             };
             @Override
             public Fragment getItem(int position) {

@@ -9,6 +9,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.example.rajeev.shareride.models.Post;
@@ -121,6 +123,11 @@ public class NewPostActivity extends BasicActivity {
         // Body is required
         if (TextUtils.isEmpty(destination)) {
             mBodyField.setError(REQUIRED);
+            return;
+        }
+
+        if(source.equalsIgnoreCase(destination)){
+            Toast.makeText(this, "Source and Destination should be different", Toast.LENGTH_LONG).show();
             return;
         }
 
