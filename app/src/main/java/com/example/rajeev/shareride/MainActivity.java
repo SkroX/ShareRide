@@ -76,10 +76,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int i = item.getItemId();
         if (i == R.id.action_logout) {
+
             FirebaseAuth.getInstance().signOut();
             startActivity(new Intent(this, SignInActivity.class));
             finish();
             return true;
+
+        } else if(i == R.id.about){
+
+            startActivity(new Intent(this, AppInfo.class));
+            finish();
+            return true;
+
         } else {
             return super.onOptionsItemSelected(item);
         }
