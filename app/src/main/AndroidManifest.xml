@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.rajeev.shareride">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,12 +23,9 @@
         <activity
             android:name=".PostDetailActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".MainActivity"/>
-        <activity
-            android:name=".NewPostActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity android:name=".NewPostActivity" />
+        <activity android:name=".AppInfo"></activity>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET"/>
 
 </manifest>
