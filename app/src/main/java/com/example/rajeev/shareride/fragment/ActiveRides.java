@@ -15,7 +15,7 @@ public class ActiveRides extends PostListFragment {
     public Query getQuery(DatabaseReference databaseReference) {
 
         Query recentPostsQuery = databaseReference.child("posts")
-                .limitToFirst(100);
+                .limitToFirst(1000);
 
         return recentPostsQuery;
     }
