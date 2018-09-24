@@ -2,15 +2,19 @@ package com.example.rajeev.shareride;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.text.TextUtils;
+import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Display;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.rajeev.shareride.models.User;
@@ -50,7 +54,7 @@ public class SignInActivity extends BasicActivity implements View.OnClickListene
     private EditText mPasswordField;
     private Button mSignInButton;
     private Button mSignUpButton;
-    private SignInButton mGoogleSignInButton;
+    private Button mGoogleSignInButton;
     private GoogleApiClient mGoogleApiClient;
 
     @Override
@@ -59,11 +63,25 @@ public class SignInActivity extends BasicActivity implements View.OnClickListene
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_sign_in);
 
+        Display display = getWindowManager().getDefaultDisplay();
+        DisplayMetrics displayMetrics = new DisplayMetrics();
+        display.getMetrics(displayMetrics);
+        float density = getResources().getDisplayMetrics().density;
+        float dpHeight = displayMetrics.heightPixels / density;
+        float dpWidth = displayMetrics.widthPixels / density;
+//        Log.e("Width", String.valueOf(size.x));
+//        Toast.makeText(this,   " Width "+ String.valueOf(dpWidth)+ " Height " + String.valueOf(dpHeight), Toast.LENGTH_LONG).show();
+
         mGoogleSignInButton = findViewById(R.id.login_with_google);
-        mGoogleSignInButton.setSize(SignInButton.SIZE_WIDE);
+
+        // To position button at runtime
+        RelativeLayout.LayoutParams mSignInButton = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
+        mSignInButton.leftMargin = (int) (dpWidth*0.4);
+        mSignInButton.topMargin = (int) (dpHeight*1.3);
+        mGoogleSignInButton.setLayoutParams(mSignInButton);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("USE YOUR OWN TOKEN")
+                .requestIdToken("YOUR_TOKEN")
                 .requestEmail()
                 .build();
 
