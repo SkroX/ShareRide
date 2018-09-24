@@ -81,7 +81,7 @@ public class SignInActivity extends BasicActivity implements View.OnClickListene
         mGoogleSignInButton.setLayoutParams(mSignInButton);
 
         GoogleSignInOptions googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken("YOUR_TOKEN")
+                .requestIdToken("USE YOUR TOKEN")
                 .requestEmail()
                 .build();
 
