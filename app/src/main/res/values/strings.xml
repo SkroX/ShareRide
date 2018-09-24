@@ -18,4 +18,6 @@
     <string name="contact_number">Contact No</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_new_post">NewPostActivity</string>
+    <string name="app_info_body_content">ShareRide aims at easing the process of Cab Sharing between NIT Hamirpur and near by places.</string>
+    <string name="about_rajeev"><a href="https://rajeev29five.github.io/about">Rajeev</a></string>
 </resources>
