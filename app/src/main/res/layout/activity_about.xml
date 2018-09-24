@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppInfo">
+
+    <TextView
+        android:id="@+id/our_aim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Our Aim"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"/>
+
+    <View
+        android:id="@+id/separator_app_info"
+        android:layout_marginLeft="10dp"
+        android:layout_width="143dp"
+        android:layout_height="2dp"
+        android:backgroundTint="@color/black"
+        android:background="@color/black"
+        android:layout_below="@+id/our_aim"/>
+
+    <TextView
+        android:id="@+id/app_info_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="60dp"
+        android:text="@string/app_info_body_content"
+        android:textColor="@color/greyish"
+        android:layout_below="@+id/separator_app_info"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/contributors_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="27dp"
+        android:text="Contributor(s)"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/app_info_body"/>
+
+    <TextView
+        android:id="@+id/first_contributor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="4dp"
+        android:textSize="20sp"
+        android:text="@string/about_rajeev"
+        android:layout_below="@+id/contributors_head" />
+</RelativeLayout>
