@@ -12,9 +12,9 @@ public class BasicActivity extends AppCompatActivity {
 
     public void showProgressDialog() {
         if (mProgressDialog == null) {
-            mProgressDialog = new ProgressDialog(this);
+            mProgressDialog = new ProgressDialog(this, R.style.CustomProgressDialog);
             mProgressDialog.setCancelable(false);
-            mProgressDialog.setMessage("Loading...");
+            mProgressDialog.setMessage("Signing In...");
         }
 
         mProgressDialog.show();

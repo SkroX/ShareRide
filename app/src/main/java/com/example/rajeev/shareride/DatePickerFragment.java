@@ -24,7 +24,7 @@ public class DatePickerFragment extends DialogFragment implements DatePickerDial
         int month = c.get(Calendar.MONTH);
         int day = c.get(Calendar.DAY_OF_MONTH);
 
-        return new DatePickerDialog(getActivity(), AlertDialog.THEME_DEVICE_DEFAULT_DARK,this, year, month, day);
+        return new DatePickerDialog(getActivity(), R.style.DateAndTimePicker,this, year, month, day);
     }
 
     @Override
