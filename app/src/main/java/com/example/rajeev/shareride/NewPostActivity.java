@@ -7,6 +7,8 @@ import android.support.design.widget.FloatingActionButton;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -30,8 +32,8 @@ public class NewPostActivity extends BasicActivity {
 
     private DatabaseReference mDatabase;
 
-    private EditText mTitleField;
-    private EditText mBodyField;
+    private AutoCompleteTextView mTitleField;
+    private AutoCompleteTextView mBodyField;
     private EditText mPerson1;
     private EditText mPerson2;
     private EditText mPerson3;
@@ -70,6 +72,14 @@ public class NewPostActivity extends BasicActivity {
         mSubmitButton = findViewById(R.id.fab_submit_post);
         mDate = findViewById(R.id.date);
         mTime = findViewById(R.id.time);
+
+
+        String []places = getResources().getStringArray(R.array.places);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, places);
+        mTitleField.setAdapter(arrayAdapter);
+        mBodyField.setAdapter(arrayAdapter);
+        mTitleField.setThreshold(1);
+        mBodyField.setThreshold(1);
 
         mDate.setOnClickListener(new View.OnClickListener() {
             @Override

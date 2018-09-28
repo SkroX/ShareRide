@@ -83,9 +83,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
 
         } else if(i == R.id.about){
-
-            startActivity(new Intent(this, AppInfo.class));
-            finish();
+            startActivity(new Intent(MainActivity.this, AppInfo.class));
             return true;
 
         } else {
