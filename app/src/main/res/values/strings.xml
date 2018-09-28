@@ -18,6 +18,31 @@
     <string name="contact_number">Contact No</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_new_post">NewPostActivity</string>
-    <string name="app_info_body_content">ShareRide aims at easing the process of Cab Sharing between NIT Hamirpur and near by places.</string>
-    <string name="about_rajeev"><a href="https://rajeev29five.github.io/about">Rajeev</a></string>
+    <string name="app_info_body_content">ShareRide is a carpooling app for easy and cheaper commute. An easy to use application that helps you to share a ride between NIT Hamirpur and nearby places. Travel together and save money by sharing fuel together.</string>
+    <string name="about_rajeev"><a href="https://rajeev29five.github.io/about" style="color: #0000EE">Rajeev</a></string>
+    <string-array name="places">
+        <item>MMBH</item>
+        <item>KBH</item>
+        <item>PGH</item>
+        <item>AGH</item>
+        <item>VBH</item>
+        <item>NBH</item>
+        <item>Himgiri</item>
+        <item>Himadri</item>
+        <item>Gate 1</item>
+        <item>Gate 2</item>
+        <item>Gate 1.5</item>
+        <item>Satpura</item>
+        <item>Student Park</item>
+        <item>Hamirpur Bus Stand</item>
+        <item>Dharamshala</item>
+        <item>Kangra</item>
+        <item>Shimla</item>
+        <item>Chandigarh</item>
+        <item>Kullu</item>
+        <item>Manali</item>
+        <item>Delhi</item>
+        <item>Palampur</item>
+        <item>Mcleodganj</item>
+    </string-array>
 </resources>
