@@ -18,5 +18,6 @@ public class AppInfo extends AppCompatActivity {
 
         firstContributor = findViewById(R.id.first_contributor);
         firstContributor.setMovementMethod(LinkMovementMethod.getInstance());
+        firstContributor.setTextColor(getResources().getColor(R.color.link_blue));
     }
 }
