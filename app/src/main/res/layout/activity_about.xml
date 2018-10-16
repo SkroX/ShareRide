@@ -16,7 +16,7 @@
         android:id="@+id/our_app"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Our App"
+        android:text="App Info"
         android:textSize="35sp"
         android:textColor="@color/black"
         android:paddingLeft="10dp"/>
