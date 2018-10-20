@@ -7,3 +7,5 @@
 /build
 /captures
 .externalNativeBuild
+*.out
+.ds_store
