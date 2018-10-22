@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rajeev.shareride">
+    package="com.nith.rajeev.shareride">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SignInActivity"
+            android:name="com.nith.rajeev.shareride.SignInActivity"
             android:theme="@style/SignInTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,11 +21,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PostDetailActivity"
+            android:name="com.nith.rajeev.shareride.PostDetailActivity"
             android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".NewPostActivity" />
-        <activity android:name=".AppInfo"></activity>
+        <activity android:name="com.nith.rajeev.shareride.MainActivity" />
+        <activity android:name="com.nith.rajeev.shareride.NewPostActivity" />
+        <activity android:name="com.nith.rajeev.shareride.AppInfo" />
+        <activity android:name="com.nith.rajeev.shareride.BasicActivity"/>
     </application>
 
 </manifest>

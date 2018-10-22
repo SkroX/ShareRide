@@ -130,40 +130,40 @@
         android:text="save the environment."
         android:textSize="22sp"/>
 
-    <TextView
-        android:id="@+id/contributors_head"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:textSize="26sp"
-        android:text="Contributor(s)"
-        android:paddingTop="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/save_planet_body"/>
+    <!--<TextView-->
+        <!--android:id="@+id/contributors_head"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:textSize="26sp"-->
+        <!--android:text="Contributor(s)"-->
+        <!--android:paddingTop="30dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_below="@+id/save_planet_body"/>-->
 
-    <View
-        android:id="@+id/separator_contributiors"
-        android:layout_width="80dp"
-        android:layout_centerInParent="true"
-        android:layout_height="1dp"
-        android:paddingTop="5dp"
-        android:background="@color/greyish"
-        android:backgroundTint="@color/greyish"
-        android:layout_below="@+id/contributors_head"/>
+    <!--<View-->
+        <!--android:id="@+id/separator_contributiors"-->
+        <!--android:layout_width="80dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:paddingTop="5dp"-->
+        <!--android:background="@color/greyish"-->
+        <!--android:backgroundTint="@color/greyish"-->
+        <!--android:layout_below="@+id/contributors_head"/>-->
 
 
-    <TextView
-        android:id="@+id/first_contributor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="50dp"
-        android:textSize="20sp"
-        android:text="@string/about_rajeev"
-        android:textColor="@color/link_blue"
-        android:layout_below="@+id/contributors_head" />
+    <!--<TextView-->
+        <!--android:id="@+id/first_contributor"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="15dp"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:textSize="20sp"-->
+        <!--android:text="@string/about_rajeev"-->
+        <!--android:textColor="@color/link_blue"-->
+        <!--android:layout_below="@+id/contributors_head" />-->
 
     </RelativeLayout>
 </ScrollView>
