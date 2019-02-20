@@ -248,7 +248,7 @@ public class NewPostActivity extends BasicActivity {
         Map<String, Object> childUpdates = new HashMap<>();
         childUpdates.put("/posts/" + key, postValues);
         childUpdates.put("/user-posts/" + userId + "/" + key, postValues);
-
+        childUpdates.put("/posts2/" + key, postValues);
         mDatabase.updateChildren(childUpdates);
     }
 }
