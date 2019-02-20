@@ -4,6 +4,13 @@
     tools:context=".MainActivity">
 
     <item
+        android:id="@+id/rate_and_review"
+        android:title="Rate &amp; Review"
+        android:visible="true"
+        app:showAsAction="never"
+        />
+
+    <item
         android:id="@+id/about"
         android:visible="true"
         app:showAsAction="never"
@@ -14,4 +21,6 @@
         android:title="@string/menu_logout"
         android:visible="true"
         app:showAsAction="never" />
+
+
 </menu>
