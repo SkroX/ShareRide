@@ -1,6 +1,8 @@
 package com.nith.rajeev.shareride;
 
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -11,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import com.nith.rajeev.shareride.fragment.ActiveRides;
 import com.nith.rajeev.shareride.fragment.PreviousRides;
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         mPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {
             private final Fragment[] mFragments = new Fragment[]{
                     new ActiveRides(),
@@ -82,6 +87,22 @@ public class MainActivity extends AppCompatActivity {
 
         } else if(i == R.id.about){
             startActivity(new Intent(MainActivity.this, AppInfo.class));
+            return true;
+
+        }else if (i == R.id.rate_and_review){
+
+            Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+            Intent goToPlayStore = new Intent(Intent.ACTION_VIEW, uri);
+            goToPlayStore.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY|
+                                   Intent.FLAG_ACTIVITY_NEW_DOCUMENT|
+                                   Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
+
+            try {
+                startActivity(goToPlayStore);
+            } catch (ActivityNotFoundException e) {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
+            }
+
             return true;
 
         } else {
