@@ -19,7 +19,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_new_post">NewPostActivity</string>
     <string name="app_info_body_content">ShareRide is a carpooling app for easy and cheaper commute. An easy to use application that helps you to share a ride between NIT Hamirpur and nearby places. Travel together and save money by sharing fuel together.</string>
-    <string name="about_rajeev"><a href="https://rajeev29five.github.io/about" style="color: #0000EE">Rajeev</a></string>
+    <string name="about_rajeev">Rajeev Ranjan</string>
     <string-array name="places">
         <item>MMBH</item>
         <item>KBH</item>
@@ -35,8 +35,17 @@
         <item>Satpura</item>
         <item>Student Park</item>
         <item>Hamirpur Bus Stand</item>
+        <item>Una</item>
+        <item>Jaipur</item>
         <item>Dharamshala</item>
         <item>Kangra</item>
+        <item>Mandi</item>
+        <item>Chamba</item>
+        <item>Nangal</item>
+        <item>Nadaun</item>
+        <item>Nalagarh</item>
+        <item>Sunder Nagar</item>
+        <item>Bilaspur</item>
         <item>Shimla</item>
         <item>Chandigarh</item>
         <item>Kullu</item>
