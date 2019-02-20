@@ -2,6 +2,7 @@ package com.nith.rajeev.shareride.viewholder;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.nith.rajeev.shareride.R;
@@ -27,6 +28,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
     public TextView mContact3View;
     public TextView mContact4View;
     public TextView mContact5View;
+    public Button deleteButton;
 
     public PostViewHolder(View itemView) {
         super(itemView);
@@ -45,9 +47,11 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         mContact3View = itemView.findViewById(R.id.contact_3_text);
         mContact4View = itemView.findViewById(R.id.contact_4_text);
         mContact5View = itemView.findViewById(R.id.contact_5_text);
+        deleteButton = itemView.findViewById(R.id.delete);
+
     }
 
-    public void bindToPost(Post post) {
+    public void bindToPost(Post post, View.OnClickListener deleteClickListener) {
 
         titleView.setText(post.title);
         mDateView.setText(post.dateOfJourney);
@@ -56,7 +60,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         String[] displayBody = post.body.split("@");
         mPerson1View.setText(displayBody[0].split("#")[0]);
         mContact1View.setText(displayBody[0].split("#")[1]);
-        
+        deleteButton.setOnClickListener(deleteClickListener);
 
         if(displayBody[1] != "#"){
             if (displayBody[1].split("#").length > 1 ){
