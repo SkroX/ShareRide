@@ -2,6 +2,8 @@ package com.nith.rajeev.shareride;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -57,8 +59,13 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mPagerAdapter);
+        getSupportActionBar().setElevation(0);
         TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+        tabLayout.setBackgroundColor(Color.parseColor("#817BCB"));
+        tabLayout.setTabTextColors(Color.parseColor("#B2AFF7"), Color.parseColor("#FFFFFF"));
+        tabLayout.setSelectedTabIndicatorColor(Color.parseColor("#FFFFFF"));
+        tabLayout.setSelectedTabIndicatorHeight(8);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab_new_post);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
 
         }else if (i == R.id.rate_and_review){
 
-            Uri uri = Uri.parse("market://details?id=" + getApplicationContext().getPackageName());
+            Uri uri = Uri.parse("https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName());
             Intent goToPlayStore = new Intent(Intent.ACTION_VIEW, uri);
             goToPlayStore.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY|
                                    Intent.FLAG_ACTIVITY_NEW_DOCUMENT|
@@ -100,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
             try {
                 startActivity(goToPlayStore);
             } catch (ActivityNotFoundException e) {
-                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + getApplicationContext().getPackageName())));
             }
 
             return true;
