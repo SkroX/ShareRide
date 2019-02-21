@@ -24,7 +24,8 @@
             android:name="com.nith.rajeev.shareride.PostDetailActivity"
             android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.nith.rajeev.shareride.MainActivity" />
-        <activity android:name="com.nith.rajeev.shareride.NewPostActivity" />
+        <activity android:name="com.nith.rajeev.shareride.NewPostActivity"
+            android:windowSoftInputMode="adjustPan" />
         <activity android:name="com.nith.rajeev.shareride.AppInfo" />
         <activity android:name="com.nith.rajeev.shareride.BasicActivity"/>
     </application>
