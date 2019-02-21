@@ -37,133 +37,58 @@
         android:paddingLeft="10dp"
         android:paddingRight="10dp"
         android:paddingTop="15dp"
-        android:paddingBottom="60dp"
+        android:paddingBottom="20dp"
         android:text="@string/app_info_body_content"
         android:textColor="@color/greyish"
         android:layout_below="@+id/separator_app_info"
         android:textSize="22sp" />
 
 
-    <ImageView
-        android:id="@+id/save_money"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/save_money"
-        android:layout_centerInParent="true"
+    <TextView
+        android:id="@+id/contributors_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:text="Contributor(s)"
+        android:paddingTop="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
         android:layout_below="@+id/app_info_body"/>
 
-    <TextView
-        android:id="@+id/save_money_head"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <View
+        android:id="@+id/separator_contributiors"
+        android:layout_width="80dp"
         android:layout_centerInParent="true"
+        android:layout_height="1dp"
         android:paddingTop="5dp"
-        android:text="Save money"
-        android:textSize="22sp"
-        android:layout_below="@+id/save_money"/>
+        android:background="@color/greyish"
+        android:backgroundTint="@color/greyish"
+        android:layout_below="@+id/contributors_head"/>
+
 
     <TextView
-        android:id="@+id/save_money_body"
+        android:id="@+id/first_contributor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="when taking a ride."
-        android:paddingBottom="25dp"
-        android:textSize="22sp"
-        android:layout_below="@+id/save_money_head"/>
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text="@string/about_rajeev"
+        android:layout_below="@+id/contributors_head" />
 
-    <ImageView
-        android:id="@+id/share_money"
-        android:layout_width="150dp"
-        android:layout_height="140dp"
-        android:paddingTop="25dp"
-        android:paddingBottom="10dp"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/save_money_body"
-        android:src="@drawable/share_money"/>
 
     <TextView
-        android:id="@+id/share_money_head"
+
+        android:id="@+id/email_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/share_money"
-        android:paddingTop="7dp"
-        android:text="Sharing costs"
-        android:textSize="22sp" />
-
-    <TextView
-        android:id="@+id/share_money_body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/share_money_head"
-        android:text="while giving a ride."
-        android:paddingBottom="25dp"
-        android:textSize="22sp"/>
-
-    <ImageView
-        android:id="@+id/save_planet"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_centerInParent="true"
-        android:paddingTop="25dp"
-        android:layout_below="@+id/share_money_body"
-        android:src="@drawable/save_planet"/>
-
-    <TextView
-        android:id="@+id/save_planet_head"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reduce Pollution"
-        android:textSize="22sp"
-        android:paddingTop="5dp"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/save_planet"/>
-
-    <TextView
-        android:id="@+id/save_planet_body"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_below="@+id/save_planet_head"
-        android:text="save the environment."
-        android:textSize="22sp"/>
-
-    <!--<TextView-->
-        <!--android:id="@+id/contributors_head"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:textColor="@color/black"-->
-        <!--android:textSize="26sp"-->
-        <!--android:text="Contributor(s)"-->
-        <!--android:paddingTop="30dp"-->
-        <!--android:layout_marginTop="5dp"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_below="@+id/save_planet_body"/>-->
-
-    <!--<View-->
-        <!--android:id="@+id/separator_contributiors"-->
-        <!--android:layout_width="80dp"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:layout_height="1dp"-->
-        <!--android:paddingTop="5dp"-->
-        <!--android:background="@color/greyish"-->
-        <!--android:backgroundTint="@color/greyish"-->
-        <!--android:layout_below="@+id/contributors_head"/>-->
-
-
-    <!--<TextView-->
-        <!--android:id="@+id/first_contributor"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:layout_marginTop="15dp"-->
-        <!--android:layout_marginBottom="50dp"-->
-        <!--android:textSize="20sp"-->
-        <!--android:text="@string/about_rajeev"-->
-        <!--android:textColor="@color/link_blue"-->
-        <!--android:layout_below="@+id/contributors_head" />-->
+        android:layout_below="@id/first_contributor"
+        android:text="rajeev29five@gmail.com"
+        android:autoLink="email"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"/>
 
     </RelativeLayout>
 </ScrollView>
