@@ -3,8 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".NewPostActivity">
+    tools:context=".NewPostActivity"
+    android:id="@+id/new_post_activity">
 
     <ScrollView
         android:id="@+id/scroll_view"
@@ -14,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
     <LinearLayout
+        android:id="@+id/above_dummy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -273,6 +276,13 @@
         </LinearLayout>
     </LinearLayout>
 
+      <View
+          android:id="@+id/dummy"
+          android:layout_width="match_parent"
+          android:layout_height="300dp"
+          android:visibility="invisible"
+          android:layout_below="@+id/above_dummy"
+          />
     </RelativeLayout>
 
     </ScrollView>
