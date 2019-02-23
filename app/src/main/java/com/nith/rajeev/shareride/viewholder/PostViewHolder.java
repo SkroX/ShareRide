@@ -102,24 +102,5 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
                 mContact5View.setText("");
             }
         }
-//        int c = 1;
-//        for (int i = 1; i<displayBody.length ; i++)
-//        {
-//            if(displayBody[i].equalsIgnoreCase("#")){
-//                continue;
-//            }
-//            else{
-//                if (displayBody[i].split("#").length > 1){
-//                    textViewsPerson[c].setText(displayBody[i].split("#")[0]);
-//                    textViewsContact[c].setText(displayBody[i].split("#")[1]);
-//                }
-//                else {
-//                    textViewsPerson[c].setText(displayBody[i].replace("#", ""));
-//                    textViewsContact[c].setText("");
-//                }
-//                c++;
-//            }
-//        }
-//        c = 0;
     }
 }
