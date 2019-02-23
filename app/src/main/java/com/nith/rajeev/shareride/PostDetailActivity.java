@@ -42,7 +42,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
     private ValueEventListener mPostListener;
     private String mPostKey;
     private CommentAdapter mAdapter;
-
     private TextView mAuthorView;
     private TextView mTitleView;
     private TextView mDate;
@@ -57,7 +56,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
     private TextView mContact3View;
     private TextView mContact4View;
     private TextView mContact5View;
-//    private TextView mBodyView;
     private EditText mCommentField;
     private Button mCommentButton;
     private RecyclerView mCommentsRecycler;
@@ -67,19 +65,16 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post_detail);
 
-        // Get post key from intent
         mPostKey = getIntent().getStringExtra(EXTRA_POST_KEY);
         if (mPostKey == null) {
             throw new IllegalArgumentException("Must pass EXTRA_POST_KEY");
         }
 
-        // Initialize Database
         mPostReference = FirebaseDatabase.getInstance().getReference()
                 .child("posts2").child(mPostKey);
         mCommentsReference = FirebaseDatabase.getInstance().getReference()
                 .child("post-comments").child(mPostKey);
 
-        // Initialize Views
         mAuthorView = findViewById(R.id.post_author);
         mTitleView = findViewById(R.id.post_title);
         mDate = findViewById(R.id.text_date);
@@ -94,7 +89,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
         mContact3View = findViewById(R.id.contact_3_text);
         mContact4View = findViewById(R.id.contact_4_text);
         mContact5View = findViewById(R.id.contact_5_text);
-//        mBodyView = findViewById(R.id.post_body);
         mCommentField = findViewById(R.id.field_comment_text);
         mCommentButton = findViewById(R.id.button_post_comment);
         mCommentsRecycler = findViewById(R.id.recycler_comments);
@@ -107,14 +101,11 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
     public void onStart() {
         super.onStart();
 
-        // Add value event listener to the post
-        // [START post_value_event_listener]
         ValueEventListener postListener = new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                // Get Post object and use the values to update the UI
+
                 Post post = dataSnapshot.getValue(Post.class);
-                // [START_EXCLUDE]
                 mAuthorView.setText(post.author);
                 mTitleView.setText(post.title);
                 mDate.setText(post.dateOfJourney);
@@ -163,26 +154,17 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                         mContact5View.setText("");
                     }
                 }
-//                mBodyView.setText(post.body);
-                // [END_EXCLUDE]
+
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                // Getting Post failed, log a message
                 Log.w(TAG, "loadPost:onCancelled", databaseError.toException());
-                // [START_EXCLUDE]
                 Toast.makeText(PostDetailActivity.this, "Failed to load post.", Toast.LENGTH_SHORT).show();
-                // [END_EXCLUDE]
             }
         };
         mPostReference.addValueEventListener(postListener);
-        // [END post_value_event_listener]
-
-        // Keep copy of post listener so we can remove it when app stops
         mPostListener = postListener;
-
-        // Listen for comments
         mAdapter = new CommentAdapter(this, mCommentsReference);
         mCommentsRecycler.setAdapter(mAdapter);
     }
@@ -191,12 +173,10 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
     public void onStop() {
         super.onStop();
 
-        // Remove post value event listener
         if (mPostListener != null) {
             mPostReference.removeEventListener(mPostListener);
         }
 
-        // Clean up comments listener
         mAdapter.cleanupListener();
     }
 
@@ -214,11 +194,8 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        // Get user information
                         User user = dataSnapshot.getValue(User.class);
                         String authorName = user.username;
-
-                        // Create new comment object
                         String commentText = mCommentField.getText().toString().trim();
                         if(TextUtils.isEmpty(commentText)){
                             showToast();
@@ -226,10 +203,8 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                         }
                         Comment comment = new Comment(uid, authorName, commentText);
 
-                        // Push the comment, it will appear in the list
                         mCommentsReference.push().setValue(comment);
 
-                        // Clear the field
                         mCommentField.setText(null);
                         mCommentsRecycler.smoothScrollToPosition(mAdapter.getItemCount());
                     }
@@ -271,62 +246,45 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
             mContext = context;
             mDatabaseReference = ref;
 
-            // Create child event listener
-            // [START child_event_listener_recycler]
             ChildEventListener childEventListener = new ChildEventListener() {
                 @Override
                 public void onChildAdded(DataSnapshot dataSnapshot, String previousChildName) {
                     Log.d(TAG, "onChildAdded:" + dataSnapshot.getKey());
 
-                    // A new comment has been added, add it to the displayed list
                     Comment comment = dataSnapshot.getValue(Comment.class);
 
-                    // [START_EXCLUDE]
-                    // Update RecyclerView
                     mCommentIds.add(dataSnapshot.getKey());
                     mComments.add(comment);
                     notifyItemInserted(mComments.size() - 1);
-                    // [END_EXCLUDE]
                 }
 
                 @Override
                 public void onChildChanged(DataSnapshot dataSnapshot, String previousChildName) {
                     Log.d(TAG, "onChildChanged:" + dataSnapshot.getKey());
 
-                    // A comment has changed, use the key to determine if we are displaying this
-                    // comment and if so displayed the changed comment.
                     Comment newComment = dataSnapshot.getValue(Comment.class);
                     String commentKey = dataSnapshot.getKey();
 
-                    // [START_EXCLUDE]
                     int commentIndex = mCommentIds.indexOf(commentKey);
                     if (commentIndex > -1) {
-                        // Replace with the new data
                         mComments.set(commentIndex, newComment);
-
-                        // Update the RecyclerView
                         notifyItemChanged(commentIndex);
                     } else {
                         Log.w(TAG, "onChildChanged:unknown_child:" + commentKey);
                     }
-                    // [END_EXCLUDE]
                 }
 
                 @Override
                 public void onChildRemoved(DataSnapshot dataSnapshot) {
                     Log.d(TAG, "onChildRemoved:" + dataSnapshot.getKey());
 
-                    // A comment has changed, use the key to determine if we are displaying this
-                    // comment and if so remove it.
                     String commentKey = dataSnapshot.getKey();
 
                     int commentIndex = mCommentIds.indexOf(commentKey);
                     if (commentIndex > -1) {
-                        // Remove data from the list
                         mCommentIds.remove(commentIndex);
                         mComments.remove(commentIndex);
 
-                        // Update the RecyclerView
                         notifyItemRemoved(commentIndex);
                     } else {
                         Log.w(TAG, "onChildRemoved:unknown_child:" + commentKey);
@@ -336,9 +294,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                 @Override
                 public void onChildMoved(DataSnapshot dataSnapshot, String previousChildName) {
                     Log.d(TAG, "onChildMoved:" + dataSnapshot.getKey());
-
-                    // A comment has changed position, use the key to determine if we are
-                    // displaying this comment and if so move it.
                     Comment movedComment = dataSnapshot.getValue(Comment.class);
                     String commentKey = dataSnapshot.getKey();
 
@@ -352,9 +307,6 @@ public class PostDetailActivity extends BasicActivity implements View.OnClickLis
                 }
             };
             ref.addChildEventListener(childEventListener);
-            // [END child_event_listener_recycler]
-
-            // Store reference to listener so it can be removed on app stop
             mChildEventListener = childEventListener;
         }
 
